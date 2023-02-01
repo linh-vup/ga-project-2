@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "react-scripts build"
   },
   "keywords": [],
   "author": "",
@@ -38,6 +39,7 @@
     "@babel/eslint-parser": "^7.5.4",
     "@babel/preset-react": "^7.18.6",
     "bulma": "^0.9.4",
+    "netlify-cli": "^12.9.2",
     "node-sass": "^7.0.3"
   }
 }
