@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -9,7 +8,7 @@ function Navbar() {
           <Link to="/" className="navbar-item">
             Home
           </Link>
-          <>
+          {/* <>
             <Link to="/login" className="navbar-item">
               Login
             </Link>
@@ -19,7 +18,7 @@ function Navbar() {
           </>
           <Link to="/account" className="navbar-item">
             Account
-          </Link>
+          </Link> */}
           {/* {isLoggedIn && (
             <div onClick={logOut} className="navbar-item">
               Log Out
