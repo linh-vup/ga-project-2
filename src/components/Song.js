@@ -8,12 +8,9 @@ function Song() {
   const [track, setTrack] = useState(null);
 
   useEffect(() => {
-    console.log('CALL USE EFFECT');
     const startDataFetching = (offset) => {
       getAlbums(offset)
         .then((res) => {
-          console.log('GOT', res.data.albums.length, 'Albums');
-
           const albumsByYear = res.data.albums.filter(
             (album) => album.originallyReleased.substring(0, 4) === birthyear
           );
@@ -40,15 +37,12 @@ function Song() {
                     Math.floor(Math.random() * res.data.tracks.length)
                   ].id;
 
-                console.log('FILTERED TRACK', randomSongId);
-
                 getTrack(randomSongId)
                   .then((res) => setTrack(res.data))
                   .catch((err) => console.error(err));
               })
               .catch((err) => console.error(err));
           } else {
-            console.log('NO FILTERED ALBUMS');
             startDataFetching(offset + 200);
           }
         })
